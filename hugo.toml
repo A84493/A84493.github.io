@@ -1,8 +1,105 @@
-baseURL = "https://github.io.com/"
-languageCode = "en-us"
-title = "My Hugo Site"
-theme = "ananke"
+baseURL = "https://a84493.github.io/"
+languageCode = "zh-cn"
+title = "ROS笔记"
+theme = "PaperMod"
 
-# 主题参数（根据主题文档配置）
 [params]
-  description = "Welcome to my Hugo site!"
+  # 显示增强功能
+  ShowCodeCopyButtons = true
+  ShowShareButtons = true
+  ShowReadingTime = true
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowToc = true
+
+  # 主题模式配置
+  defaultTheme = "auto"
+  disableThemeToggle = false
+
+  # 代码显示优化
+  codeMaxLines = 1000
+  codeLineNumbers = true
+  codeAutoWrap = true
+
+  [params.assets]
+    disableHLJS = true
+
+  # 个人资料模块
+  [params.profileMode]
+    enabled = true
+    title = "ROS开发者笔记"
+    imageUrl = "img/avatar.webp"
+    imageWidth = 120
+    imageHeight = 120
+    buttons = [
+      {name = "GitHub", url = "https://github.com/a84493"},
+      {name = "B站", url = "https://space.bilibili.com/xxxx"}
+    ]
+
+  # 社交链接配置（页脚显示）
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/a84493"
+    title = "GitHub仓库"
+
+  [[params.socialIcons]]
+    name = "bilibili"
+    url = "https://space.bilibili.com/xxxx"
+    title = "B站主页"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "技术文章"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签云"
+    url = "/tags/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "series"
+    name = "专题系列"
+    url = "/series/"
+    weight = 30
+
+  [[menu.sidebar]]
+    identifier = "archives"
+    name = "时间轴"
+    url = "/archives/"
+    weight = 40
+
+[markup]
+  [markup.highlight]
+    # 基础配置
+    codeFences = true          # 启用代码围栏
+    guessSyntax = true         # 自动检测未标注语言
+    lineNos = true             # 显示行号
+    lineNumbersInTable = false # 禁用表格行号布局
+    noClasses = false          # 必须关闭以启用CSS类
+    style = "monokai"          # 推荐暗色主题
+    tabWidth = 4               # 兼容C++/Python缩进
+    anchorLineNos = true
+
+    # 扩展语言支持
+    codeLang = ["roslaunch", "cpp", "bash", "python"]
+    
+  [markup.math]
+    enable = true
+    use = "katex"
+
+[build]
+  writeStats = true
+  noChmod = true
+  useResourceCacheWhen = "fallback"
+
+[imaging]
+  quality = 85
+  resampleFilter = "CatmullRom"
+
+[minify]
+  disableXML = true
+  minifyOutput = true

@@ -1,0 +1,38 @@
+/* 解决长代码自动换行 */
+.post-content pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* 行号间距调整 */
+  .highlight .ln {
+    margin-right: 1.2rem;
+  }
+
+  /* 修复暗黑模式背景冲突 */
+.chroma {
+  background: var(--code-bg) !important;
+}
+/* 解决行号对齐问题 */
+.chroma .lnt {
+  margin-right: 1.5rem;
+  color: #6c757d;
+}
+
+/* 增强ROS XML标签高亮 */
+.chroma .nt {  /* XML标签名 */
+  color: #4EC9B0; 
+}
+.chroma .na {  /* 属性名 */
+  color: #9CDCFE;
+}
+/* 行号间距优化 */
+.highlight .lnt {
+  margin-right: 1.5rem;
+  color: #6c757d;
+}
+/* 代码块滚动条美化 */
+pre {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
