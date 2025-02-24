@@ -3,7 +3,7 @@
 <span class=entry-hint title=Draft><svg height="20" viewBox="0 -960 960 960" fill="currentcolor"><path d="M160-410v-60h3e2v60H160zm0-165v-60h470v60H160zm0-165v-60h470v60H160zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22-4.5 22.5T862.09-380L643-160H520zm3e2-263-37-37 37 37zM580-220h38l121-122-18-19-19-18-122 121v38zm141-141-19-18 37 37-18-19z"/></svg></span></h2></header><div class=entry-content><p>正文内容 启动 rosmaster 所有节点的管理器（负责管理通信，名称解析等）[相当于银行] roscore # 会创建/rosout节点 启动 “功能包” 里的 “节点”（会启动小乌龟）[相当于运钞车] 语法：rosrun “功能包” “节点” rosrun turtlesim turtlesim_node 启动 “功能包” 里的 “节点”（允许键盘控制乌龟）[相当于取钱的用户] rosrun turtlesim turtle_teleop_key rqt_graph # rqt_XXX:基于qt的可视化工具，这里是显示节点图
 测试代码高亮及代码块 python
 1def hello(): 2 print("Hello Hugo") C++
-1#include &lt;ros/ros.h> // 类名高亮 2class DemoNode { 3public: 4 void callback(const std_msgs::String& msg); // 函数参数着色 5}; ROS
+1#include &lt;ros/ros.h> // 头文件着色 2class DemoNode { // 类名高亮 3public: 4 void callback(const std_msgs::String& msg); // 函数参数着色 5}; ROS
 1&lt;launch> 2 &lt;node pkg="turtlesim" type="turtlesim_node" name="turtle1"/> &lt;!-- XML语法高亮 --> 3&lt;/launch> bash
 1rostopic pub /turtle1/cmd_vel geometry_msgs/Twist \ # 管道符着色 2 "linear: {x: 2.0, y: 0.0, z: 0.0}" # JSON结构高亮 打印所有节点
 1rosnode list rosnode info 功能包 # 打印功能包信息（发布、订阅、服务、id） rostopic list # 打印所有话题 rostopic pub 话题名 数据消息结构 “具体数据信息” # 通过指令给话题发布数据 rostopic pub 话题名 数据消息结构 “具体数据信息” -r 10 # 指定发送频率
