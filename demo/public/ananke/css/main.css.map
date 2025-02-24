@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "D:/Google_Drive/tangliqiang0713/Doctor/website/demo",
+	"sourceRoot": "D:/Google_Drive/tangliqiang0713/Doctor/hugo/demo",
 	"sources": [
 		"ananke/css/main.css"
 	],

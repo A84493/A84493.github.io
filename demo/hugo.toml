@@ -1,4 +1,8 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'ananke' 
+baseURL = "https://github.io.com/"
+languageCode = "en-us"
+title = "My Hugo Site"
+theme = "ananke"
+
+# 主题参数（根据主题文档配置）
+[params]
+  description = "Welcome to my Hugo site!"
